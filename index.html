@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="js/script.js"></script>
+<style>
+	 #overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: #999;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            z-index: 100;
+        }
+	
+	        .popupcontent {
+            padding: 10px;
+        }
+		#get_popup {
+            display: none;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            background: #fff;
+            width: 500px;
+            height: 250px;
+            margin-left: -250px; /*Half the value of width to center div*/
+            margin-top: -250px; /*Half the value of height to center div*/
+            z-index:1200;
+        }
+		
+		#get_popupclose {
+            float: right;
+            padding: 10px;
+            cursor: pointer;
+        }
+</style>
+</head>
+
+<body>
+		
+	
+            <button class="search-area" id="get_button">
+            <h1 align="center" style="color:#fff !important;">Get Started</h1>        
+            </button>
+
+
+            
+            
+<!-- open popup one -->
+
+<div id="overlay"></div>
+
+<div id="get_popup">
+    <div class="popupcontrols">
+        <span id="get_popupclose">X</span>
+    </div>
+    <div class="get_popupcontent">
+    
+    	<br />
+        <br />
+        <br />
+        <br />
+        
+        <table width="80%" style="margin:auto">
+        <tr>
+        <td><button type="button" class="item-price" style="background:#e9573b;color:#fff;padding:5px;margin:5px;width:100%;" id="button" />Canteen Management</button></td>
+        </tr>
+        <tr>
+        <td><button type="button" class="item-price" style="background:#e9573b;color:#fff;padding:5px;margin:5px;width:100%;" id="employee_signin" />Are You Employee</button></td>
+        </tr>
+        </table>
+    </div>
+</div>
+
+<!-- close one popup -->
+
+<script type="text/javascript">
+
+	var closePopup = document.getElementById("get_popupclose");
+    	var overlay = document.getElementById("overlay");
+	var popup = document.getElementById("popup");
+	var get_button = document.getElementById("get_button");
+
+	
+    // Close Popup Event
+	
+		//popupt window 3
+	
+	    	get_button.onclick = function() {
+        	overlay.style.display = 'block';
+        	get_popup.style.display = 'block';
+		get_button.style.display='none';
+
+		}
+
+		get_popupclose.onclick = function() {
+        	overlay.style.display = 'none';
+   		get_popup.style.display = 'none';
+		get_button.style.display='block';
+		
+    };
+		
+
+	
+				
+
+</script>
+</body>
+</html>
